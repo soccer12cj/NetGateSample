@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://www.iatspayments.com/NetGate/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://www.iatspayments.com/NetGate/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.iatspayments.com/NetGate/">
+      <s:element name="GetCreditCardBankReconciliationReportCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="summaryOnly" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardBankReconciliationReportCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardBankReconciliationReportCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardApprovedSpecificDateCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardApprovedSpecificDateCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardApprovedSpecificDateCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardApprovedSpecificDateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardApprovedSpecificDateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardApprovedSpecificDateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardApprovedDateRangeCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardApprovedDateRangeCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardApprovedDateRangeCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardRejectDateRangeCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardRejectDateRangeCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardRejectDateRangeCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardRejectSpecificDateCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardRejectSpecificDateCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardRejectSpecificDateCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardRejectSpecificDateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardRejectSpecificDateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardRejectSpecificDateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTBankReconciliationReportCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="summaryOnly" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTBankReconciliationReportCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTBankReconciliationReportCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTApprovedSpecificDateCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTApprovedSpecificDateCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTApprovedSpecificDateCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTApprovedSpecificDateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTApprovedSpecificDateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTApprovedSpecificDateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTApprovedDateRangeCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTApprovedDateRangeCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTApprovedDateRangeCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTRejectDateRangeCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTRejectDateRangeCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTRejectDateRangeCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTReturnDateRangeCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTReturnDateRangeCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTReturnDateRangeCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTRejectSpecificDateCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTRejectSpecificDateCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTRejectSpecificDateCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTRejectSpecificDateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTRejectSpecificDateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTRejectSpecificDateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTReturnSpecificDateCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTReturnSpecificDateCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTReturnSpecificDateCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTReturnSpecificDateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTReturnSpecificDateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTReturnSpecificDateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCreditCardBankReconciliationReportCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardBankReconciliationReportCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardBankReconciliationReportCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardBankReconciliationReportCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardApprovedSpecificDateCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardApprovedSpecificDateCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardApprovedSpecificDateCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardApprovedSpecificDateCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardApprovedSpecificDateXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardApprovedSpecificDateXML" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardApprovedSpecificDateXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardApprovedSpecificDateXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardApprovedDateRangeCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardApprovedDateRangeCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardApprovedDateRangeCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardApprovedDateRangeCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardRejectDateRangeCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardRejectDateRangeCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardRejectDateRangeCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardRejectDateRangeCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardRejectSpecificDateCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardRejectSpecificDateCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardRejectSpecificDateCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardRejectSpecificDateCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardRejectSpecificDateXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardRejectSpecificDateXML" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardRejectSpecificDateXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardRejectSpecificDateXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTBankReconciliationReportCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTBankReconciliationReportCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTBankReconciliationReportCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTBankReconciliationReportCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTApprovedSpecificDateCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTApprovedSpecificDateCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTApprovedSpecificDateCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTApprovedSpecificDateCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTApprovedSpecificDateXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTApprovedSpecificDateXML" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTApprovedSpecificDateXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTApprovedSpecificDateXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTApprovedDateRangeCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTApprovedDateRangeCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTApprovedDateRangeCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTApprovedDateRangeCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTRejectDateRangeCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTRejectDateRangeCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTRejectDateRangeCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTRejectDateRangeCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTReturnDateRangeCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTReturnDateRangeCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTReturnDateRangeCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTReturnDateRangeCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTRejectSpecificDateCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTRejectSpecificDateCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTRejectSpecificDateCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTRejectSpecificDateCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTRejectSpecificDateXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTRejectSpecificDateXML" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTRejectSpecificDateXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTRejectSpecificDateXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTReturnSpecificDateCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTReturnSpecificDateCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTReturnSpecificDateCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTReturnSpecificDateCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTReturnSpecificDateXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTReturnSpecificDateXML" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTReturnSpecificDateXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTReturnSpecificDateXMLResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ReportLinkV3Soap">
+    <wsdl:operation name="GetCreditCardBankReconciliationReportCSV">
+      <wsdl:input message="tns:GetCreditCardBankReconciliationReportCSVSoapIn" />
+      <wsdl:output message="tns:GetCreditCardBankReconciliationReportCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardApprovedSpecificDateCSV">
+      <wsdl:input message="tns:GetCreditCardApprovedSpecificDateCSVSoapIn" />
+      <wsdl:output message="tns:GetCreditCardApprovedSpecificDateCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardApprovedSpecificDateXML">
+      <wsdl:input message="tns:GetCreditCardApprovedSpecificDateXMLSoapIn" />
+      <wsdl:output message="tns:GetCreditCardApprovedSpecificDateXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardApprovedDateRangeCSV">
+      <wsdl:input message="tns:GetCreditCardApprovedDateRangeCSVSoapIn" />
+      <wsdl:output message="tns:GetCreditCardApprovedDateRangeCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectDateRangeCSV">
+      <wsdl:input message="tns:GetCreditCardRejectDateRangeCSVSoapIn" />
+      <wsdl:output message="tns:GetCreditCardRejectDateRangeCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectSpecificDateCSV">
+      <wsdl:input message="tns:GetCreditCardRejectSpecificDateCSVSoapIn" />
+      <wsdl:output message="tns:GetCreditCardRejectSpecificDateCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectSpecificDateXML">
+      <wsdl:input message="tns:GetCreditCardRejectSpecificDateXMLSoapIn" />
+      <wsdl:output message="tns:GetCreditCardRejectSpecificDateXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTBankReconciliationReportCSV">
+      <wsdl:input message="tns:GetACHEFTBankReconciliationReportCSVSoapIn" />
+      <wsdl:output message="tns:GetACHEFTBankReconciliationReportCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTApprovedSpecificDateCSV">
+      <wsdl:input message="tns:GetACHEFTApprovedSpecificDateCSVSoapIn" />
+      <wsdl:output message="tns:GetACHEFTApprovedSpecificDateCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTApprovedSpecificDateXML">
+      <wsdl:input message="tns:GetACHEFTApprovedSpecificDateXMLSoapIn" />
+      <wsdl:output message="tns:GetACHEFTApprovedSpecificDateXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTApprovedDateRangeCSV">
+      <wsdl:input message="tns:GetACHEFTApprovedDateRangeCSVSoapIn" />
+      <wsdl:output message="tns:GetACHEFTApprovedDateRangeCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectDateRangeCSV">
+      <wsdl:input message="tns:GetACHEFTRejectDateRangeCSVSoapIn" />
+      <wsdl:output message="tns:GetACHEFTRejectDateRangeCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnDateRangeCSV">
+      <wsdl:input message="tns:GetACHEFTReturnDateRangeCSVSoapIn" />
+      <wsdl:output message="tns:GetACHEFTReturnDateRangeCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectSpecificDateCSV">
+      <wsdl:input message="tns:GetACHEFTRejectSpecificDateCSVSoapIn" />
+      <wsdl:output message="tns:GetACHEFTRejectSpecificDateCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectSpecificDateXML">
+      <wsdl:input message="tns:GetACHEFTRejectSpecificDateXMLSoapIn" />
+      <wsdl:output message="tns:GetACHEFTRejectSpecificDateXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnSpecificDateCSV">
+      <wsdl:input message="tns:GetACHEFTReturnSpecificDateCSVSoapIn" />
+      <wsdl:output message="tns:GetACHEFTReturnSpecificDateCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnSpecificDateXML">
+      <wsdl:input message="tns:GetACHEFTReturnSpecificDateXMLSoapIn" />
+      <wsdl:output message="tns:GetACHEFTReturnSpecificDateXMLSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReportLinkV3Soap" type="tns:ReportLinkV3Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCreditCardBankReconciliationReportCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardBankReconciliationReportCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardApprovedSpecificDateCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardApprovedSpecificDateCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardApprovedSpecificDateXML">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardApprovedSpecificDateXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardApprovedDateRangeCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardApprovedDateRangeCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectDateRangeCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardRejectDateRangeCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectSpecificDateCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardRejectSpecificDateCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectSpecificDateXML">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardRejectSpecificDateXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTBankReconciliationReportCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTBankReconciliationReportCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTApprovedSpecificDateCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTApprovedSpecificDateCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTApprovedSpecificDateXML">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTApprovedSpecificDateXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTApprovedDateRangeCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTApprovedDateRangeCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectDateRangeCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTRejectDateRangeCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnDateRangeCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTReturnDateRangeCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectSpecificDateCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTRejectSpecificDateCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectSpecificDateXML">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTRejectSpecificDateXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnSpecificDateCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTReturnSpecificDateCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnSpecificDateXML">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTReturnSpecificDateXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReportLinkV3Soap12" type="tns:ReportLinkV3Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCreditCardBankReconciliationReportCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardBankReconciliationReportCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardApprovedSpecificDateCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardApprovedSpecificDateCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardApprovedSpecificDateXML">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardApprovedSpecificDateXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardApprovedDateRangeCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardApprovedDateRangeCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectDateRangeCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardRejectDateRangeCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectSpecificDateCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardRejectSpecificDateCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectSpecificDateXML">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardRejectSpecificDateXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTBankReconciliationReportCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTBankReconciliationReportCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTApprovedSpecificDateCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTApprovedSpecificDateCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTApprovedSpecificDateXML">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTApprovedSpecificDateXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTApprovedDateRangeCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTApprovedDateRangeCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectDateRangeCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTRejectDateRangeCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnDateRangeCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTReturnDateRangeCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectSpecificDateCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTRejectSpecificDateCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectSpecificDateXML">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTRejectSpecificDateXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnSpecificDateCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTReturnSpecificDateCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnSpecificDateXML">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTReturnSpecificDateXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReportLinkV3">
+    <wsdl:port name="ReportLinkV3Soap" binding="tns:ReportLinkV3Soap">
+      <soap:address location="https://www.iatspayments.com/NetGate/ReportLinkv3.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReportLinkV3Soap12" binding="tns:ReportLinkV3Soap12">
+      <soap12:address location="https://www.iatspayments.com/NetGate/ReportLinkv3.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
