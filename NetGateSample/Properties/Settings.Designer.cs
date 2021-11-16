@@ -12,7 +12,7 @@ namespace NetGateSample.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -30,6 +30,16 @@ namespace NetGateSample.Properties {
         public string NetGateSample_Iats_NetGate_Reporting_ReportLinkV3 {
             get {
                 return ((string)(this["NetGateSample_Iats_NetGate_Reporting_ReportLinkV3"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.iatspayments.com/NetGate/ReportLink.asmx")]
+        public string NetGateSample_Iats_NetGate_Reportingv1_ReportLink {
+            get {
+                return ((string)(this["NetGateSample_Iats_NetGate_Reportingv1_ReportLink"]));
             }
         }
     }

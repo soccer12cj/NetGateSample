@@ -1,0 +1,1394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="https://www.iatspayments.com/NetGate/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="https://www.iatspayments.com/NetGate/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.iatspayments.com/NetGate/">
+      <s:element name="GetCCJournalCSV_x0020_V1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCCJournalCSV_x0020_V1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCCJournalCSV_x0020_V1Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCCPaymentBoxJournalCSVV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="to" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="startIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCCPaymentBoxJournalCSVV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCCPaymentBoxJournalCSVV2Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCCPaymentBoxJournalCSV_x0020_V1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="to" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCCPaymentBoxJournalCSV_x0020_V1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCCPaymentBoxJournalCSV_x0020_V1Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardBankReconciliationReportCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="summaryOnly" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardBankReconciliationReportCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardBankReconciliationReportCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardJournalCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardJournalCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardJournalCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardJournalV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardJournalV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardJournalV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardPaymentBoxJournalCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardPaymentBoxJournalCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardPaymentBoxJournalCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardPaymentBoxJournalCSVV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardPaymentBoxJournalCSVV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardPaymentBoxJournalCSVV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardPaymentBoxRejectCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardPaymentBoxRejectCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardPaymentBoxRejectCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardPaymentBoxRejectCSVV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardPaymentBoxRejectCSVV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardPaymentBoxRejectCSVV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardRejectCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardRejectCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardRejectCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardRejectV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardRejectV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardRejectV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTBankReconciliationReportCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="summaryOnly" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTBankReconciliationReportCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTBankReconciliationReportCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTJournalCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTJournalCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTJournalCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTJournalV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTJournalV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTJournalV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxJournalCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxJournalCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTPaymentBoxJournalCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxJournalCSVV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxJournalCSVV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTPaymentBoxJournalCSVV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxJournalCSVV3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxJournalCSVV3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTPaymentBoxJournalCSVV3Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxJournalCSV_x0020_V1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="to" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxJournalCSV_x0020_V1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTPaymentBoxJournalCSV_x0020_V1Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxRejectCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxRejectCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTPaymentBoxRejectCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxRejectCSVV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxRejectCSVV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTPaymentBoxRejectCSVV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxReturnCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTPaymentBoxReturnCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTPaymentBoxReturnCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTRejectCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTRejectCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTRejectCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTRejectV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTRejectV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTRejectV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTReturnCSVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTReturnCSVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTReturnCSVV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTReturnV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHEFTReturnV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHEFTReturnV1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHJournalCSV_x0020_V1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACHJournalCSV_x0020_V1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACHJournalCSV_x0020_V1Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCCJournalCSV_x0020_V1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCCJournalCSV_x0020_V1" />
+  </wsdl:message>
+  <wsdl:message name="GetCCJournalCSV_x0020_V1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCCJournalCSV_x0020_V1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCCPaymentBoxJournalCSVV2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCCPaymentBoxJournalCSVV2" />
+  </wsdl:message>
+  <wsdl:message name="GetCCPaymentBoxJournalCSVV2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCCPaymentBoxJournalCSVV2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCCPaymentBoxJournalCSV_x0020_V1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCCPaymentBoxJournalCSV_x0020_V1" />
+  </wsdl:message>
+  <wsdl:message name="GetCCPaymentBoxJournalCSV_x0020_V1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCCPaymentBoxJournalCSV_x0020_V1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardBankReconciliationReportCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardBankReconciliationReportCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardBankReconciliationReportCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardBankReconciliationReportCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardJournalCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardJournalCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardJournalCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardJournalCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardJournalV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardJournalV1" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardJournalV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardJournalV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardPaymentBoxJournalCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardPaymentBoxJournalCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardPaymentBoxJournalCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardPaymentBoxJournalCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardPaymentBoxJournalCSVV2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardPaymentBoxJournalCSVV2" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardPaymentBoxJournalCSVV2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardPaymentBoxJournalCSVV2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardPaymentBoxRejectCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardPaymentBoxRejectCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardPaymentBoxRejectCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardPaymentBoxRejectCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardPaymentBoxRejectCSVV2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardPaymentBoxRejectCSVV2" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardPaymentBoxRejectCSVV2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardPaymentBoxRejectCSVV2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardRejectCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardRejectCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardRejectCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardRejectCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardRejectV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardRejectV1" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardRejectV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardRejectV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTBankReconciliationReportCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTBankReconciliationReportCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTBankReconciliationReportCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTBankReconciliationReportCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTJournalCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTJournalCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTJournalCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTJournalCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTJournalV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTJournalV1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTJournalV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTJournalV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxJournalCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxJournalCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxJournalCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxJournalCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxJournalCSVV2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxJournalCSVV2" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxJournalCSVV2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxJournalCSVV2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxJournalCSVV3SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxJournalCSVV3" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxJournalCSVV3SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxJournalCSVV3Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxJournalCSV_x0020_V1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxJournalCSV_x0020_V1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxJournalCSV_x0020_V1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxJournalCSV_x0020_V1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxRejectCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxRejectCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxRejectCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxRejectCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxRejectCSVV2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxRejectCSVV2" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxRejectCSVV2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxRejectCSVV2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxReturnCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxReturnCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTPaymentBoxReturnCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTPaymentBoxReturnCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTRejectCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTRejectCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTRejectCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTRejectCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTRejectV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTRejectV1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTRejectV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTRejectV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTReturnCSVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTReturnCSVV1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTReturnCSVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTReturnCSVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTReturnV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHEFTReturnV1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHEFTReturnV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHEFTReturnV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetACHJournalCSV_x0020_V1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetACHJournalCSV_x0020_V1" />
+  </wsdl:message>
+  <wsdl:message name="GetACHJournalCSV_x0020_V1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetACHJournalCSV_x0020_V1Response" />
+  </wsdl:message>
+  <wsdl:portType name="ReportLinkSoap">
+    <wsdl:operation name="GetCCJournalCSV">
+      <wsdl:input name="GetCCJournalCSV_x0020_V1" message="tns:GetCCJournalCSV_x0020_V1SoapIn" />
+      <wsdl:output name="GetCCJournalCSV_x0020_V1" message="tns:GetCCJournalCSV_x0020_V1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCCPaymentBoxJournalCSVV2">
+      <wsdl:input message="tns:GetCCPaymentBoxJournalCSVV2SoapIn" />
+      <wsdl:output message="tns:GetCCPaymentBoxJournalCSVV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCCPaymentBoxJournalCSV">
+      <wsdl:input name="GetCCPaymentBoxJournalCSV_x0020_V1" message="tns:GetCCPaymentBoxJournalCSV_x0020_V1SoapIn" />
+      <wsdl:output name="GetCCPaymentBoxJournalCSV_x0020_V1" message="tns:GetCCPaymentBoxJournalCSV_x0020_V1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardBankReconciliationReportCSV">
+      <wsdl:input name="GetCreditCardBankReconciliationReportCSVV1" message="tns:GetCreditCardBankReconciliationReportCSVV1SoapIn" />
+      <wsdl:output name="GetCreditCardBankReconciliationReportCSVV1" message="tns:GetCreditCardBankReconciliationReportCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardJournalCSV">
+      <wsdl:input name="GetCreditCardJournalCSVV1" message="tns:GetCreditCardJournalCSVV1SoapIn" />
+      <wsdl:output name="GetCreditCardJournalCSVV1" message="tns:GetCreditCardJournalCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardJournal">
+      <wsdl:input name="GetCreditCardJournalV1" message="tns:GetCreditCardJournalV1SoapIn" />
+      <wsdl:output name="GetCreditCardJournalV1" message="tns:GetCreditCardJournalV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxJournalCSV">
+      <wsdl:input name="GetCreditCardPaymentBoxJournalCSVV1" message="tns:GetCreditCardPaymentBoxJournalCSVV1SoapIn" />
+      <wsdl:output name="GetCreditCardPaymentBoxJournalCSVV1" message="tns:GetCreditCardPaymentBoxJournalCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxJournalCSVV2">
+      <wsdl:input message="tns:GetCreditCardPaymentBoxJournalCSVV2SoapIn" />
+      <wsdl:output message="tns:GetCreditCardPaymentBoxJournalCSVV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxRejectCSV">
+      <wsdl:input name="GetCreditCardPaymentBoxRejectCSVV1" message="tns:GetCreditCardPaymentBoxRejectCSVV1SoapIn" />
+      <wsdl:output name="GetCreditCardPaymentBoxRejectCSVV1" message="tns:GetCreditCardPaymentBoxRejectCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxRejectCSVV2">
+      <wsdl:input message="tns:GetCreditCardPaymentBoxRejectCSVV2SoapIn" />
+      <wsdl:output message="tns:GetCreditCardPaymentBoxRejectCSVV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectCSV">
+      <wsdl:input name="GetCreditCardRejectCSVV1" message="tns:GetCreditCardRejectCSVV1SoapIn" />
+      <wsdl:output name="GetCreditCardRejectCSVV1" message="tns:GetCreditCardRejectCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardReject">
+      <wsdl:input name="GetCreditCardRejectV1" message="tns:GetCreditCardRejectV1SoapIn" />
+      <wsdl:output name="GetCreditCardRejectV1" message="tns:GetCreditCardRejectV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTBankReconciliationReportCSV">
+      <wsdl:input name="GetACHEFTBankReconciliationReportCSVV1" message="tns:GetACHEFTBankReconciliationReportCSVV1SoapIn" />
+      <wsdl:output name="GetACHEFTBankReconciliationReportCSVV1" message="tns:GetACHEFTBankReconciliationReportCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTJournalCSV">
+      <wsdl:input name="GetACHEFTJournalCSVV1" message="tns:GetACHEFTJournalCSVV1SoapIn" />
+      <wsdl:output name="GetACHEFTJournalCSVV1" message="tns:GetACHEFTJournalCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTJournal">
+      <wsdl:input name="GetACHEFTJournalV1" message="tns:GetACHEFTJournalV1SoapIn" />
+      <wsdl:output name="GetACHEFTJournalV1" message="tns:GetACHEFTJournalV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSV">
+      <wsdl:input name="GetACHEFTPaymentBoxJournalCSVV1" message="tns:GetACHEFTPaymentBoxJournalCSVV1SoapIn" />
+      <wsdl:output name="GetACHEFTPaymentBoxJournalCSVV1" message="tns:GetACHEFTPaymentBoxJournalCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSVV2">
+      <wsdl:input message="tns:GetACHEFTPaymentBoxJournalCSVV2SoapIn" />
+      <wsdl:output message="tns:GetACHEFTPaymentBoxJournalCSVV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSVV3">
+      <wsdl:input message="tns:GetACHEFTPaymentBoxJournalCSVV3SoapIn" />
+      <wsdl:output message="tns:GetACHEFTPaymentBoxJournalCSVV3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSV">
+      <wsdl:input name="GetACHEFTPaymentBoxJournalCSV_x0020_V1" message="tns:GetACHEFTPaymentBoxJournalCSV_x0020_V1SoapIn" />
+      <wsdl:output name="GetACHEFTPaymentBoxJournalCSV_x0020_V1" message="tns:GetACHEFTPaymentBoxJournalCSV_x0020_V1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxRejectCSV">
+      <wsdl:input name="GetACHEFTPaymentBoxRejectCSVV1" message="tns:GetACHEFTPaymentBoxRejectCSVV1SoapIn" />
+      <wsdl:output name="GetACHEFTPaymentBoxRejectCSVV1" message="tns:GetACHEFTPaymentBoxRejectCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxRejectCSVV2">
+      <wsdl:input message="tns:GetACHEFTPaymentBoxRejectCSVV2SoapIn" />
+      <wsdl:output message="tns:GetACHEFTPaymentBoxRejectCSVV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxReturnCSVV1">
+      <wsdl:input message="tns:GetACHEFTPaymentBoxReturnCSVV1SoapIn" />
+      <wsdl:output message="tns:GetACHEFTPaymentBoxReturnCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectCSV">
+      <wsdl:input name="GetACHEFTRejectCSVV1" message="tns:GetACHEFTRejectCSVV1SoapIn" />
+      <wsdl:output name="GetACHEFTRejectCSVV1" message="tns:GetACHEFTRejectCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReject">
+      <wsdl:input name="GetACHEFTRejectV1" message="tns:GetACHEFTRejectV1SoapIn" />
+      <wsdl:output name="GetACHEFTRejectV1" message="tns:GetACHEFTRejectV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnCSV">
+      <wsdl:input name="GetACHEFTReturnCSVV1" message="tns:GetACHEFTReturnCSVV1SoapIn" />
+      <wsdl:output name="GetACHEFTReturnCSVV1" message="tns:GetACHEFTReturnCSVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturn">
+      <wsdl:input name="GetACHEFTReturnV1" message="tns:GetACHEFTReturnV1SoapIn" />
+      <wsdl:output name="GetACHEFTReturnV1" message="tns:GetACHEFTReturnV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACHJournalCSV">
+      <wsdl:input name="GetACHJournalCSV_x0020_V1" message="tns:GetACHJournalCSV_x0020_V1SoapIn" />
+      <wsdl:output name="GetACHJournalCSV_x0020_V1" message="tns:GetACHJournalCSV_x0020_V1SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReportLinkSoap" type="tns:ReportLinkSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCCJournalCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCCJournalCSV V1" style="document" />
+      <wsdl:input name="GetCCJournalCSV_x0020_V1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCCJournalCSV_x0020_V1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCCPaymentBoxJournalCSVV2">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCCPaymentBoxJournalCSVV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCCPaymentBoxJournalCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCCPaymentBoxJournalCSV V1" style="document" />
+      <wsdl:input name="GetCCPaymentBoxJournalCSV_x0020_V1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCCPaymentBoxJournalCSV_x0020_V1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardBankReconciliationReportCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardBankReconciliationReportCSVV1" style="document" />
+      <wsdl:input name="GetCreditCardBankReconciliationReportCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardBankReconciliationReportCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardJournalCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardJournalCSVV1" style="document" />
+      <wsdl:input name="GetCreditCardJournalCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardJournalCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardJournal">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardJournalV1" style="document" />
+      <wsdl:input name="GetCreditCardJournalV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardJournalV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxJournalCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardPaymentBoxJournalCSVV1" style="document" />
+      <wsdl:input name="GetCreditCardPaymentBoxJournalCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardPaymentBoxJournalCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxJournalCSVV2">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardPaymentBoxJournalCSVV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxRejectCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardPaymentBoxRejectCSVV1" style="document" />
+      <wsdl:input name="GetCreditCardPaymentBoxRejectCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardPaymentBoxRejectCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxRejectCSVV2">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardPaymentBoxRejectCSVV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardRejectCSVV1" style="document" />
+      <wsdl:input name="GetCreditCardRejectCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardRejectCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardReject">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardRejectV1" style="document" />
+      <wsdl:input name="GetCreditCardRejectV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardRejectV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTBankReconciliationReportCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTBankReconciliationReportCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTBankReconciliationReportCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTBankReconciliationReportCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTJournalCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTJournalCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTJournalCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTJournalCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTJournal">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTJournalV1" style="document" />
+      <wsdl:input name="GetACHEFTJournalV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTJournalV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxJournalCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTPaymentBoxJournalCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTPaymentBoxJournalCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSVV2">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxJournalCSVV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSVV3">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxJournalCSVV3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxJournalCSV V1" style="document" />
+      <wsdl:input name="GetACHEFTPaymentBoxJournalCSV_x0020_V1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTPaymentBoxJournalCSV_x0020_V1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxRejectCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxRejectCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTPaymentBoxRejectCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTPaymentBoxRejectCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxRejectCSVV2">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxRejectCSVV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxReturnCSVV1">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxReturnCSVV1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTRejectCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTRejectCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTRejectCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReject">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTRejectV1" style="document" />
+      <wsdl:input name="GetACHEFTRejectV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTRejectV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTReturnCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTReturnCSVV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTReturnCSVV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturn">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTReturnV1" style="document" />
+      <wsdl:input name="GetACHEFTReturnV1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTReturnV1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHJournalCSV">
+      <soap:operation soapAction="https://www.iatspayments.com/NetGate/GetACHJournalCSV V1" style="document" />
+      <wsdl:input name="GetACHJournalCSV_x0020_V1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHJournalCSV_x0020_V1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReportLinkSoap12" type="tns:ReportLinkSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCCJournalCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCCJournalCSV V1" style="document" />
+      <wsdl:input name="GetCCJournalCSV_x0020_V1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCCJournalCSV_x0020_V1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCCPaymentBoxJournalCSVV2">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCCPaymentBoxJournalCSVV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCCPaymentBoxJournalCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCCPaymentBoxJournalCSV V1" style="document" />
+      <wsdl:input name="GetCCPaymentBoxJournalCSV_x0020_V1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCCPaymentBoxJournalCSV_x0020_V1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardBankReconciliationReportCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardBankReconciliationReportCSVV1" style="document" />
+      <wsdl:input name="GetCreditCardBankReconciliationReportCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardBankReconciliationReportCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardJournalCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardJournalCSVV1" style="document" />
+      <wsdl:input name="GetCreditCardJournalCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardJournalCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardJournal">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardJournalV1" style="document" />
+      <wsdl:input name="GetCreditCardJournalV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardJournalV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxJournalCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardPaymentBoxJournalCSVV1" style="document" />
+      <wsdl:input name="GetCreditCardPaymentBoxJournalCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardPaymentBoxJournalCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxJournalCSVV2">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardPaymentBoxJournalCSVV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxRejectCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardPaymentBoxRejectCSVV1" style="document" />
+      <wsdl:input name="GetCreditCardPaymentBoxRejectCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardPaymentBoxRejectCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPaymentBoxRejectCSVV2">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardPaymentBoxRejectCSVV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardRejectCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardRejectCSVV1" style="document" />
+      <wsdl:input name="GetCreditCardRejectCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardRejectCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardReject">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetCreditCardRejectV1" style="document" />
+      <wsdl:input name="GetCreditCardRejectV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCreditCardRejectV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTBankReconciliationReportCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTBankReconciliationReportCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTBankReconciliationReportCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTBankReconciliationReportCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTJournalCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTJournalCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTJournalCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTJournalCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTJournal">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTJournalV1" style="document" />
+      <wsdl:input name="GetACHEFTJournalV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTJournalV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxJournalCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTPaymentBoxJournalCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTPaymentBoxJournalCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSVV2">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxJournalCSVV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSVV3">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxJournalCSVV3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxJournalCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxJournalCSV V1" style="document" />
+      <wsdl:input name="GetACHEFTPaymentBoxJournalCSV_x0020_V1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTPaymentBoxJournalCSV_x0020_V1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxRejectCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxRejectCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTPaymentBoxRejectCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTPaymentBoxRejectCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxRejectCSVV2">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxRejectCSVV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTPaymentBoxReturnCSVV1">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTPaymentBoxReturnCSVV1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTRejectCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTRejectCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTRejectCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTRejectCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReject">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTRejectV1" style="document" />
+      <wsdl:input name="GetACHEFTRejectV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTRejectV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturnCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTReturnCSVV1" style="document" />
+      <wsdl:input name="GetACHEFTReturnCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTReturnCSVV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHEFTReturn">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHEFTReturnV1" style="document" />
+      <wsdl:input name="GetACHEFTReturnV1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHEFTReturnV1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACHJournalCSV">
+      <soap12:operation soapAction="https://www.iatspayments.com/NetGate/GetACHJournalCSV V1" style="document" />
+      <wsdl:input name="GetACHJournalCSV_x0020_V1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetACHJournalCSV_x0020_V1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReportLink">
+    <wsdl:port name="ReportLinkSoap" binding="tns:ReportLinkSoap">
+      <soap:address location="https://www.iatspayments.com/NetGate/ReportLink.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReportLinkSoap12" binding="tns:ReportLinkSoap12">
+      <soap12:address location="https://www.iatspayments.com/NetGate/ReportLink.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
